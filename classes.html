@@ -1,10 +1,33 @@
 <html>
 <head>
 <link href="../SmallTownSteam/css/bootstrap.css" rel="stylesheet">
-<title>Previous Classes</title>
+<title>Upcoming Classes</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+    vertical-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+</style>
+
+
 </head>
 <body>
-    <div class="container py-4">
+  <?php
+  # Read the contents of all upcoming courses to be displayed in each track
+  $filename = "classes_and_registration/upcoming-classes.txt";
+  $all_courses = file($filename);
+  ?>
+  <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom">
         <div id="header">
         </div>
@@ -18,11 +41,37 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#classesDropdown">
                     <div class="accordion-body">
-                      <ul>
-                        <li><a href="">January 9th</a></li>
-                        <li><a href="">February 6th </a></li>
-                        <li><a href="">March 6th</a></li>
-                      </ul>
+                      <table> 
+                        <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                        
+                      <?php
+                          #This code breaks out the all_courses into individual courses, 
+                          #then remvoes the custom delimiter (===), breaking every course line into 
+                          #track at index 0, d/m/y as index 1, 2, 3 and title as index 4
+                          #Finally diplayes the course in a table if the index 0 of single_course matches desired  matches 
+                          #the Register link will open a new page with prepoulate course info, but will require for user to provide their info
+                          foreach ($all_courses as $single_course)
+                          { 
+                              $single_course = explode("===", $single_course);
+                              if ($single_course[0] == 'Science')
+                                {
+                                  echo "<tr>";
+                                  echo "<td> {$single_course[4]}</td>";
+                                  echo "<td> {$single_course[1]} {$single_course[2]}, {$single_course[3]}</td>";
+                                  ?>
+                                  <td> <form action="register.php" method="post">
+                                            <input type="hidden" name="track" value='<?php echo "$single_course[0]";?>'>
+                                            <input type="hidden" name="date" value='<?php echo "$single_course[1].$single_course[2].$single_course[3]";?>'>
+                                            <input type="hidden" name="course" value='<?php echo "$single_course[4]";?>'>
+                                            <input type="submit" value="Register">
+                                            </form>
+                                        </td> <?php
+                                  echo "</tr>";
+                                  
+                                }
+                          }
+                          echo "</table>"; 
+                      ?>
                     </div>
                   </div>
                 </div>
@@ -34,11 +83,23 @@
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#classesDropdown">
                     <div class="accordion-body">
-                      <ul>
-                        <li><a href="">January 10th</a></li>
-                        <li><a href="">February 7th </a></li>
-                        <li><a href="">March 7th</a></li>
-                      </ul>
+                      <table style="width:60%"> 
+                        <table> 
+                          <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                          <?php
+                          foreach ($all_courses as $data)
+                          { 
+                              $data = explode("===", $data);
+                              if ($data[0] == 'Technology')
+                                {
+                                  echo "<tr>";
+                                  echo "<td> {$data[4]}</td><td>{$data[1]} {$data[2]}, {$data[3]}</td><td>Register Now</td>";
+                                  echo "</tr>";
+                                  echo "<tr> </tr>";
+                                }
+                          }
+                          echo "</table>"; 
+                      ?>
                     </div>
                   </div>
                 </div>
