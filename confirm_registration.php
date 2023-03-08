@@ -14,11 +14,7 @@ $attendee_detail = "$name===$email \n";
 $filename = "$track-$date.txt";
 
 $filename = "classes_and_registration/$track-$date.txt";
-
-#echo $date;
-echo $filename;
-echo $attendee_detail;
-#echo " is the file we will write to"
+echo "Thank you $name for registering for the $course on $date. You will receive a confirmation email at $email";
 
 
 #$attendee = $thisname;
