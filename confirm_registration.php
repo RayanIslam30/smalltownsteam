@@ -10,10 +10,10 @@ $track = $_POST["track"];
 $course = $_POST["course"];
 $date = $_POST["date"];
 
-$attendee_detail = "$name===$email";
-$filename = "$track.$date.txt";
+$attendee_detail = "$name===$email \n";
+$filename = "$track-$date.txt";
 
-$filename = "classes_and_registration/$track.$date.txt";
+$filename = "classes_and_registration/$track-$date.txt";
 
 #echo $date;
 echo $filename;
