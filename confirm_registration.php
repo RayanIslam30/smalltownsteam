@@ -25,8 +25,8 @@ $filename = "$track-$date.txt";
 
 <div class="p-5 mb-4 text-bg-light rounded-3">
     <div class="container-fluid py-5">
-   <h1 class="displa-5 fwy-bold"><p style="color:white">Thank You for Registering!</h1></p>
-   <p style="font-size: 30px"><p style="color:white"> Thank you <?php echo $name; ?> for registering for the <?php echo $course; ?> on <?php echo $date; ?>. You will receive a confirmation email at <?php echo $email; ?></p></p>
+   <h1 class="displa-5 fwy-bold"><p style="color:white">Thank You for <?php echo $name; ?> Registering!</h1></p>
+   <h1 class="display-6"><p style="color:white"> Your registration for the <?php echo $course; ?> on <?php echo $date; ?> has been processed. You will receive a confirmation email at <?php echo $email; ?></p></p>
 </div>
 </div>
 

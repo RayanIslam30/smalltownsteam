@@ -1,7 +1,7 @@
 <html>
 <head>
 <link href="../SmallTownSteam/css/bootstrap.css" rel="stylesheet">
-<title>Upcoming Classes</title>
+<title>Admin Page</title>
 <style>
   table {
     border-collapse: collapse;
@@ -23,7 +23,6 @@
 </head>
 <body>
   <?php
-  # Read the contents of all upcoming courses to be displayed in each track
   $filename = "classes_and_registration/upcoming-classes.txt";
   $all_courses = file($filename);
   ?>
@@ -42,7 +41,7 @@
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#classesDropdown">
                     <div class="accordion-body">
                       <table> 
-                        <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                        <tr><th>Class Title</th><th>Date Offered</th><th>Attendees</th></tr>
                         
                       <?php
                           #This code breaks out the all_courses into individual courses, 
@@ -58,14 +57,8 @@
                                   echo "<tr>";
                                   echo "<td> {$science_course[4]}</td>";
                                   echo "<td> {$science_course[1]} {$science_course[2]}, {$science_course[3]}</td>";
-                                  ?>
-                                  <td> <form action="register.php" method="post">
-                                            <input type="hidden" name="track" value='<?php echo "$science_course[0]";?>'>
-                                            <input type="hidden" name="date" value='<?php echo "$science_course[1]-$science_course[2]-$science_course[3]";?>'>
-                                            <input type="hidden" name="course" value='<?php echo "$science_course[4]";?>'>
-                                            <input type="submit" value="Register">
-                                            </form>
-                                        </td> <?php
+                                  
+                                  echo "<td> <a href='classes_and_registration/{$science_course[0]}-{$science_course[1]}-{$science_course[2]}-{$science_course[3]}.txt''>View Attendees</a></td>";
                                   echo "</tr>";
                                   
                                 }
@@ -84,7 +77,7 @@
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#classesDropdown">
                     <div class="accordion-body">
                         <table> 
-                          <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                          <tr><th>Class Title</th><th>Date Offered</th><th>Attendees</th></tr>
                       <?php
                       foreach ($all_courses as $technology_course)
                       { 
@@ -99,7 +92,7 @@
                                       <input type="hidden" name="track" value='<?php echo "$technology_course[0]";?>'>
                                       <input type="hidden" name="date" value='<?php echo "$technology_course[1]-$technology_course[2]-$technology_course[3]";?>'>
                                       <input type="hidden" name="course" value='<?php echo "$technology_course[4]";?>'>
-                                      <input type="submit" value="Register">
+                                      <input type="submit" value="View Attendees">
                                       </form>
                                   </td> <?php
                             echo "</tr>";
@@ -120,7 +113,7 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#classesDropdown">
                     <div class="accordion-body">
                         <table> 
-                          <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                          <tr><th>Class Title</th><th>Date Offered</th><th>Attendees</th></tr>
                           <?php
                           foreach ($all_courses as $engineer_course)
                           { 
@@ -135,7 +128,7 @@
                                           <input type="hidden" name="track" value='<?php echo "$engineer_course[0]";?>'>
                                           <input type="hidden" name="date" value='<?php echo "$engineer_course[1]-$engineer_course[2]-$engineer_course[3]";?>'>
                                           <input type="hidden" name="course" value='<?php echo "$engineer_course[4]";?>'>
-                                          <input type="submit" value="Register">
+                                          <input type="submit" value="View Attendees">
                                           </form>
                                       </td> <?php
                                 echo "</tr>";
@@ -156,7 +149,7 @@
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#classesDropdown">
                           <div class="accordion-body">
                               <table> 
-                                <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                                <tr><th>Class Title</th><th>Date Offered</th><th>Attendees</th></tr>
                             <?php
                             foreach ($all_courses as $art_course)
                             { 
@@ -171,7 +164,7 @@
                                             <input type="hidden" name="track" value='<?php echo "$art_course[0]";?>'>
                                             <input type="hidden" name="date" value='<?php echo "$art_course[1]-$art_course[2]-$art_course[3]";?>'>
                                             <input type="hidden" name="course" value='<?php echo "$art_course[4]";?>'>
-                                            <input type="submit" value="Register">
+                                            <input type="submit" value="View Attendees">
                                             </form>
                                         </td> <?php
                                   echo "</tr>";
@@ -192,7 +185,7 @@
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#classesDropdown">
                           <div class="accordion-body">
                               <table> 
-                                <tr><th>Class Title</th><th>Date Offered</th><th>Registration Link</th></tr>
+                                <tr><th>Class Title</th><th>Date Offered</th><th>Attendees</th></tr>
                             <?php
                             foreach ($all_courses as $math_course)
                             { 
@@ -207,7 +200,7 @@
                                             <input type="hidden" name="track" value='<?php echo "$math_course[0]";?>'>
                                             <input type="hidden" name="date" value='<?php echo "$math_course[1]-$math_course[2]-$math_course[3]";?>'>
                                             <input type="hidden" name="course" value='<?php echo "$math_course[4]";?>'>
-                                            <input type="submit" value="Register">
+                                            <input type="submit" value="View Attendees">
                                             </form>
                                         </td> <?php
                                   echo "</tr>";
