@@ -212,7 +212,31 @@
                           </div>
                         </div>
                       </div>
-                
+                      <p>Add a new course:
+                        <form action="add-upcoming-class.php" method="post">
+                          Track: <select name = "track">
+                            <option value = "Science" selected>Science</option>
+                            <option value = "Technology">Technology</option>
+                            <option value = "Engineering">Engineering</option>
+                            <option value = "Art">Art</option>
+                            <option value = "Math">Math</option>
+                          </select>
+                          &nbsp; &nbsp; &nbsp; 
+                          Date: <select name = "date">
+                            <option value = "1" selected>1</option><option value = "2">2</option><option value = "3">3</option><option value = "4">4</option><option value = "5">5</option>
+                          </select>
+                          Month: <select name = "month">
+                            <option value = "January" selected>January</option><option value = "February">February</option><option value = "March">March</option><option value = "April">April</option><option value = "May">May</option><option value = "June" selected>June</option><option value = "September" selected>September</option><option value = "" selected>January</option><option value = "January" selected>January</option><option value = "January" selected>January</option>
+                          </select>
+                          Date: <select name = "year">
+                            <option value = "2023" selected>2023</option><option value = "2024">2024</option><option value = "2025">2025</option><option value = "2026">2026</option><option value = "2027">2027</option>
+                          </select>
+                          <br><br>
+                          Course Title:<input type="text" name="title">
+                          <br><br>
+                          <input type="submit" value="Add Upcoming Class">
+                        </form>
+                      </p>
               </div>
 <div id="footer">
 </div>
