@@ -27,7 +27,7 @@ $date = $_POST["date"];
 ?>
  <div class="p-5 mb-4 text-bg-light rounded-3">
     <div class="container-fluid py-5">
-   <h1 class="display-5 fw-bold"><p style="color:white">Registration Form</h1></p>
+   <h1 class="displa-5 fwy-bold"><p style="color:white">Registration Form</h1></p>
   <p style="font-size:25px"><p style="color:white">Thank you for your interest in the <?php echo $track; ?> course titled <?php echo $course; ?> on <?php echo $date; ?>. Please fill out the following form to register for the course!
   <form action="confirm_registration.php" method="post">
   <p style="font-size:17px"> <p style="color:white"> Full Name: <input type="text" name="name"><br> </p></p>

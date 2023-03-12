@@ -44,12 +44,7 @@
                         <tr><th>Class Title</th><th>Date Offered</th><th>Attendees</th></tr>
                         
                       <?php
-                          #This code breaks out the all_courses into individual courses, 
-                          #then removes the custom delimiter (===), breaking every course line into 
-                          #track at index 0, d/m/y as index 1, 2, 3 and title as index 4
-                          #Finally diplayes the course in a table if the index 0 of single_course matches desired  matches 
-                          #the Register link will open a new page with prepoulate course info, but will require for user to provide their info
-                          foreach ($all_courses as $science_course)
+                      foreach ($all_courses as $science_course)
                           { 
                               $science_course = explode("===", $science_course);
                               if ($science_course[0] == 'Science')
@@ -57,8 +52,7 @@
                                   echo "<tr>";
                                   echo "<td> {$science_course[4]}</td>";
                                   echo "<td> {$science_course[1]} {$science_course[2]}, {$science_course[3]}</td>";
-                                  
-                                  echo "<td> <a href='classes_and_registration/{$science_course[0]}-{$science_course[1]}-{$science_course[2]}-{$science_course[3]}.txt''>View Attendees</a></td>";
+                                  echo "<td> <a href='classes_and_registration/{$science_course[0]}-{$science_course[1]}-{$science_course[2]}-{$science_course[3]}.txt'>View Attendees</a></td>";
                                   echo "</tr>";
                                   
                                 }
@@ -87,14 +81,7 @@
                             echo "<tr>";
                               echo "<td> {$technology_course[4]}</td>";
                             echo "<td> {$technology_course[1]} {$technology_course[2]}, {$technology_course[3]}</td>";
-                            ?>
-                            <td> <form action="register.php" method="post">
-                                      <input type="hidden" name="track" value='<?php echo "$technology_course[0]";?>'>
-                                      <input type="hidden" name="date" value='<?php echo "$technology_course[1]-$technology_course[2]-$technology_course[3]";?>'>
-                                      <input type="hidden" name="course" value='<?php echo "$technology_course[4]";?>'>
-                                      <input type="submit" value="View Attendees">
-                                      </form>
-                                  </td> <?php
+                            echo "<td> <a href='classes_and_registration/{$technology_course[0]}-{$technology_course[1]}-{$technology_course[2]}-{$technology_course[3]}.txt'>View Attendees</a></td>";
                             echo "</tr>";
                             
                           }
@@ -123,14 +110,7 @@
                                 echo "<tr>";
                                   echo "<td> {$engineer_course[4]}</td>";
                                 echo "<td> {$engineer_course[1]} {$engineer_course[2]}, {$engineer_course[3]}</td>";
-                                ?>
-                                <td> <form action="register.php" method="post">
-                                          <input type="hidden" name="track" value='<?php echo "$engineer_course[0]";?>'>
-                                          <input type="hidden" name="date" value='<?php echo "$engineer_course[1]-$engineer_course[2]-$engineer_course[3]";?>'>
-                                          <input type="hidden" name="course" value='<?php echo "$engineer_course[4]";?>'>
-                                          <input type="submit" value="View Attendees">
-                                          </form>
-                                      </td> <?php
+                                echo "<td> <a href='classes_and_registration/{$engineer_course[0]}-{$engineer_course[1]}-{$engineer_course[2]}-{$engineer_course[3]}.txt'>View Attendees</a></td>";
                                 echo "</tr>";
                                 
                               }
@@ -159,14 +139,7 @@
                                   echo "<tr>";
                                     echo "<td> {$art_course[4]}</td>";
                                   echo "<td> {$art_course[1]} {$art_course[2]}, {$art_course[3]}</td>";
-                                  ?>
-                                  <td> <form action="register.php" method="post">
-                                            <input type="hidden" name="track" value='<?php echo "$art_course[0]";?>'>
-                                            <input type="hidden" name="date" value='<?php echo "$art_course[1]-$art_course[2]-$art_course[3]";?>'>
-                                            <input type="hidden" name="course" value='<?php echo "$art_course[4]";?>'>
-                                            <input type="submit" value="View Attendees">
-                                            </form>
-                                        </td> <?php
+                                  echo "<td> <a href='classes_and_registration/{$art_course[0]}-{$art_course[1]}-{$art_course[2]}-{$art_course[3]}.txt'>View Attendees</a></td>";
                                   echo "</tr>";
                                   
                                 }
@@ -195,14 +168,7 @@
                                   echo "<tr>";
                                     echo "<td> {$math_course[4]}</td>";
                                   echo "<td> {$math_course[1]} {$math_course[2]}, {$math_course[3]}</td>";
-                                  ?>
-                                  <td> <form action="register.php" method="post">
-                                            <input type="hidden" name="track" value='<?php echo "$math_course[0]";?>'>
-                                            <input type="hidden" name="date" value='<?php echo "$math_course[1]-$math_course[2]-$math_course[3]";?>'>
-                                            <input type="hidden" name="course" value='<?php echo "$math_course[4]";?>'>
-                                            <input type="submit" value="View Attendees">
-                                            </form>
-                                        </td> <?php
+                                  echo "<td> <a href='classes_and_registration/{$math_course[0]}-{$math_course[1]}-{$math_course[2]}-{$math_course[3]}.txt'>View Attendees</a></td>";
                                   echo "</tr>";
                                   
                                 }
@@ -213,28 +179,22 @@
                         </div>
                       </div>
                       <p>Add a new course:
-                        <form action="add-upcoming-class.php" method="post">
-                          Track: <select name = "track">
+                        <form action="classes_and_registration/upcoming-classes.php" method="post">
+                          Course Type: <select name = "track">
                             <option value = "Science" selected>Science</option>
                             <option value = "Technology">Technology</option>
                             <option value = "Engineering">Engineering</option>
                             <option value = "Art">Art</option>
                             <option value = "Math">Math</option>
                           </select>
-                          &nbsp; &nbsp; &nbsp; 
-                          Date: <select name = "date">
-                            <option value = "1" selected>1</option><option value = "2">2</option><option value = "3">3</option><option value = "4">4</option><option value = "5">5</option>
-                          </select>
-                          Month: <select name = "month">
-                            <option value = "January" selected>January</option><option value = "February">February</option><option value = "March">March</option><option value = "April">April</option><option value = "May">May</option><option value = "June" selected>June</option><option value = "September" selected>September</option><option value = "" selected>January</option><option value = "January" selected>January</option><option value = "January" selected>January</option>
-                          </select>
-                          Date: <select name = "year">
-                            <option value = "2023" selected>2023</option><option value = "2024">2024</option><option value = "2025">2025</option><option value = "2026">2026</option><option value = "2027">2027</option>
-                          </select>
+                          &nbsp;
+                          <label for="date">Date of Course: </label>
+                          <input type="date" id="date" name="date">
                           <br><br>
-                          Course Title:<input type="text" name="title">
+                          Course Title: <input type="text" name="title">
                           <br><br>
                           <input type="submit" value="Add Upcoming Class">
+
                         </form>
                       </p>
               </div>
