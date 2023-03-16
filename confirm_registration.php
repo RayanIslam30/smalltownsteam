@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body>
 
+<head>
+<title>Confirm Registration</title>
+<link rel="icon" type="image/x-icon" href="icon.png">
 <link href="../SmallTownSteam/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
 <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom"> 
     <div id="header">

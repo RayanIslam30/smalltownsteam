@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-<body>
 
+<head>
+<title>Add Class</title>
+<link rel="icon" type="image/x-icon" href="icon.png">
 <link href="../SmallTownSteam/css/bootstrap.css" rel="stylesheet">
 <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom"> 
     <div id="header">
 	</div>
     </header>
+</head>
+<body>
 
 <?php
 $track = $_POST["track"];
