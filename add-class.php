@@ -27,7 +27,9 @@ $newcourse = "$track===$month===$date===$year===$title"
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold"><p style="color:white">Course to Be Added</h1></p>
         <p style="font-size:50px"><p style="color:white"> <?php echo "A $track course, on $month $date, $year,  titled $title." ?></p></p>
-
+        <button class="btn btn-white" type="button"><a href="index.html">Return to Home</a></button>  
+        &nbsp; &nbsp; &nbsp; 
+        <button class="btn btn-white" type="button"><a href="adminPage.html">Return to Admin Page</a></button>
       </div>
     </div>
 
