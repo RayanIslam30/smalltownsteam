@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <title>Confirm Registration</title>
 <link rel="icon" type="image/x-icon" href="icon.png">
 <link href="../SmallTownSteam/css/bootstrap.css" rel="stylesheet">
@@ -29,8 +29,8 @@ $filename = "$track-$date.txt";
 
 <div class="p-5 mb-4 text-bg-light rounded-3">
     <div class="container-fluid py-5">
-   <h1 class="displa-5 fwy-bold"><p style="color:white">Thank You for <?php echo $name; ?> Registering!</h1></p>
-   <h1 class="display-6"><p style="color:white"> Your registration for the <?php echo $course; ?> on <?php echo $date; ?> has been processed. You will receive a confirmation email at <?php echo $email; ?></p></p>
+   <h1 class="displa-5 fwy-bold"><p style="color:white">Thank You for Registering <?php echo $name; ?>!</h1></p>
+   <p style="color:white;font-size:30px;">Your registration for the <?php echo $course; ?> on <?php echo $date; ?> has been processed. You will receive a confirmation email at <?php echo $email; ?></p>
 </div>
 </div>
 

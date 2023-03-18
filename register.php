@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <title>Register for Class</title>
 <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
@@ -30,13 +31,14 @@ $date = $_POST["date"];
 ?>
  <div class="p-5 mb-4 text-bg-light rounded-3">
     <div class="container-fluid py-5">
-   <h1 class="displa-5 fwy-bold"><p style="color:white">Registration Form</h1></p>
-  <p style="font-size:35px"><p style="color:white">Thank you for your interest in the <?php echo $track; ?> course <?php echo $course; ?>. 
-  <p style="font-size:35px"><p style="color:white">This course will take place on <?php echo $date ?>.
-  <p style="font-size:35px"><p style="color:white">Please fill out the short form below to sign up for the course!
+   <h1 class="displa-5 fwy-bold"><p style="color:white"> Registration Form </h1></p>
+   <p style="color:white;font-size:25px;">Thank you for your interest in the SmallTown Steam <?php echo $track ?> track! <?php echo $course?>.</p>
+   <p style="color:white;font-size:25px;">You are registering for the course titled "<?php echo $course?>". </p>
+   <p style="color:white;font-size:25px;">This course will take place on <?php echo $date ?>. </p>
+   <p style="color:white;font-size:25px;">Please fill out the short form below to sign up for the course! </p>
   <form action="confirm_registration.php" method="post">
-  <p style="font-size:17px"> <p style="color:white"> Full Name: <input type="text" name="name"><br> </p></p>
-  <p style="font-size:17px"><p style="color:white"> E-mail:‎ ‎ ‎ ‎ ‎ ‎ ‎  <input type="text" name="email"><br> </p></p>
+  <p style="color:white;font-size:17px;"> Full Name: <input type="text" name="name"><br></p>
+  <p style="color:white;font-size:17px;"> E-mail:‎ ‎ ‎ ‎ ‎ ‎ ‎  <input type="text" name="email"><br></p>
     <input type="hidden" name="track" value='<?php echo "$track";?>'>
     <input type="hidden" name="course" value='<?php echo "$course";?>'>
     <input type="hidden" name="date" value='<?php echo "$date";?>'>

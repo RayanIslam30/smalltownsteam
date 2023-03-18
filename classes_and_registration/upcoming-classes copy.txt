@@ -20,3 +20,4 @@ Math===September===22===2023===Course number 3 Math
 Math===October===20===2023===Course number 4 Math
 Engineering===July===15===2025===Engineering teswt
 Engineering===July===15===2025===Engineering teswt
+Science===January===1===2023===
