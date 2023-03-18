@@ -14,33 +14,30 @@
 
 <?php
 $track = $_POST["track"];
+$month = $_POST["month"];
 $date = $_POST["date"];
+$year = $_POST["year"];
 $title = $_POST["title"]; 
+$newcourse = "$track===$month===$date===$year===$title"
+
 ?>
+
+
  <div class="p-5 mb-4 text-bg-light rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold"><p style="color:white">Course to Be Added</h1></p>
-        <p style="font-size:40px"><p style="color:white"> <?php echo "A $track course, on $date, titled $title." ?></p></p>
-		<form action="classes_and_registration/upcoming-classes.php" method="post">
-	    <input type="hidden" name="track" value='<?php echo "$track";?>'>
-    <input type="hidden" name="title" value='<?php echo "$title";?>'>
-    <input type="hidden" name="date" value='<?php echo "$date";?>'>
-    <input type="submit" name="Confirm New Class">
-</form>
+        <p style="font-size:50px"><p style="color:white"> <?php echo "A $track course, on $month $date, $year,  titled $title." ?></p></p>
 
       </div>
     </div>
-<p id="newcourse"><?php echo $track?>===<?php echo $date?>===<?php echo $title?></p> 
-<script>
-let str = document.getElementById("newcourse").innerHTML; 
-let res = str.replace(/-/g, "===");
-document.getElementById("newcourse").innerHTML = res;
-</script>
 
 <?php
-$newcourse = $_POST["newcourse"];
-echo $newcourse;
+$myfile = fopen("classes_and_registration/upcoming-classes copy.txt", "a"); 
+fwrite($myfile, "\n");
+fwrite($myfile, $newcourse);
+fclose($myfile);
 ?>
+
 <div id="footer">
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -6735,6 +6735,11 @@ textarea.form-control-lg {
 
 .text-bg-success {
   color: #fff !important;
+  background-color: RGBA(220, 244, 255 , var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-success-old {
+  color: #fff !important;
   background-color: RGBA(95, 90, 75 , var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -6745,13 +6750,19 @@ textarea.form-control-lg {
 
 .text-bg-warning {
   color: #000 !important;
-  background-color: RGBA(173, 216, 255 , var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(170, 233 , 255 , var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-warning-old {
+  color: #000 !important;
+  background-color: RGBA(187, 196, 255 , var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-danger {
   color: #fff !important;
   background-color: RGBA(173, 216, 230, var(--bs-bg-opacity, 1)) !important;
 }
+
 
 .text-bg-light {
   color: #000 !important;

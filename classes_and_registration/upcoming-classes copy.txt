@@ -1,0 +1,22 @@
+Science===May===8===2023===Course number 1 Science
+Science===June===5===2023===Course number 2 Science
+Science===September===18===2023===Course number 3 Science
+Science===October===16===2023===Course number 4 Science
+Technology===May===9===2023===Course number 1 Technology
+Technology===June===6===2023===Course number 2 Technology
+Technology===September===19===2023===Course number 3 Technology
+Technology===October===17===2023===Course number 4 Technology
+Engineering===May===10===2023===Course number 1 Engineering
+Engineering===June===7===2023===Course number 2 Engineering
+Engineering===September===20===2023===Course number 3 Engineering
+Engineering===October===18===2023===Course number 4 Engineering
+Art===May===11===2023===Course number 1 Art
+Art===June===8===2023===Course number 2 Art
+Art===September===21===2023===Course number 3 Art
+Art===October===19===2023===Course number 4 Art
+Math===May===12===2023===Course number 1 Math
+Math===June===9===2023===Course number 2 Math
+Math===September===22===2023===Course number 3 Math
+Math===October===20===2023===Course number 4 Math
+Engineering===July===15===2025===Engineering teswt
+Engineering===July===15===2025===Engineering teswt
