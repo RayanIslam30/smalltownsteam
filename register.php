@@ -32,7 +32,7 @@ $date = $_POST["date"];
  <div class="p-5 mb-4 text-bg-light rounded-3">
     <div class="container-fluid py-5">
    <h1 class="displa-5 fwy-bold"><p style="color:white"> Registration Form </h1></p>
-   <p style="color:white;font-size:25px;">Thank you for your interest in the SmallTown Steam <?php echo $track ?> track! <?php echo $course?>.</p>
+   <p style="color:white;font-size:25px;">Thank you for your interest in the SmallTown Steam <?php echo $track ?> category! </p>
    <p style="color:white;font-size:25px;">You are registering for the course titled "<?php echo $course?>". </p>
    <p style="color:white;font-size:25px;">This course will take place on <?php echo $date ?>. </p>
    <p style="color:white;font-size:25px;">Please fill out the short form below to sign up for the course! </p>
