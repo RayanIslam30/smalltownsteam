@@ -1,15 +1,15 @@
-Science===January===9===2023===Course 1 Science===https://www.khanacademy.org/ 
-Science===February===13===2023===Course 2 Science===https://www.khanacademy.org/
-Science===March===13===2023===Course 3 Science===https://www.khanacademy.org/
-Technology===January===10===2023===Course 1 Technology===https://www.khanacademy.org/
-Technology===February===14===2023===Course 2 Technology===https://www.khanacademy.org/
-Technology===March===14===2023===Course 3 Technology===https://www.khanacademy.org/
-Engineering===January===11===2023===Course 1 Engineering===https://www.khanacademy.org/
-Engineering===February===15===2023===Course 2 Engineering===https://www.khanacademy.org/
-Engineering===March===15===2023===Course 3 Engineering===https://www.khanacademy.org/
-Art===January===12===2023===Course 1 Art===https://www.khanacademy.org/
-Art===February===16===2023===Course 2 Art===https://www.khanacademy.org/
-Art===March===16===2023===Course 3 Art===https://www.khanacademy.org/
-Math===January===13===2023===Course 1 Math===https://www.khanacademy.org/
-Math===February===17===2023===Course 2 Math===https://www.khanacademy.org/
-Math===March===17===2023===Course 3 Math===https://www.khanacademy.org/
+Science===January===9===2023===Intro to astronomy
+Science===February===13===2023===Intro to ecology
+Science===March===13===2023===Intro to physics 
+Technology===January===10===2023===Intro to cybersecurity
+Technology===February===14===2023===Intro to virtual and augmented reality
+Technology===March===14===2023===Intro to the cloud
+Engineering===January===11===2023===Intro to computer assisted design and engineering
+Engineering===February===15===2023===Intro to alternate energy sources
+Engineering===March===15===2023===Intro to environmental engineering
+Art===January===12===2023===Intro to watercolor 
+Art===February===16===2023===Intro to contemporary art
+Art===March===16===2023===Intro to abstract art
+Math===January===13===2023===Intro to arithmetic
+Math===February===17===2023===Intro to probablity 
+Math===March===17===2023===Intro to trigonometry 

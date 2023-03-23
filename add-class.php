@@ -35,7 +35,7 @@ $newcourse = "$track===$month===$date===$year===$title"
     </div>
 
 <?php
-$myfile = fopen("classes_and_registration/upcoming-classes copy.txt", "a"); 
+$myfile = fopen("classes_and_registration/upcoming-classes.txt", "a"); 
 fwrite($myfile, "\n");
 fwrite($myfile, $newcourse);
 fclose($myfile);
