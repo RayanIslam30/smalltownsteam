@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="Rayan Islam and Bootstrap contributors">
     <title>Register for Class</title>
 <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
