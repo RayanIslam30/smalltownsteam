@@ -9,7 +9,7 @@ This was my first attemp at any sort of website development.
 
 
 
-## How you need to run this Repo:
+## How to use this Repo:
 Anyone can use this code as long as they have a web server.
 
 
